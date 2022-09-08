@@ -70,7 +70,26 @@ function prepareData(jsonData) {
   //I am saying forEach Object replace the values.
   // The ROW for every animal (obj) is created in the template!
   arrAnimals.forEach(displayAnimal);
+
+  //Filter
+  //Here I am creating a variable for what I want "ONLY CATS" !!
+  //That variable is equal to the filtered of the array. But I need a funtion to filter.
+  //The is-function ! .filter callback that function.
+  const onlyCats = arrAnimals.filter(isCat);
+  console.log(onlyCats);
+  //Why need to be inside this function ???
 }
+
+//FIlter
+function isCat(animal) {
+  if (animal.type === "cat") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+////////////////////////// VIEW  ///////////////////////////////
 
 // I didn't use the Configuration Object that Peter used, but review it's useful.
 //Display in the View (Html and Screen)
